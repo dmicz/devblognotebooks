@@ -1,6 +1,19 @@
+# SVD Image Compression, Explained
+
 **Singular Value Decomposition** (**SVD**) is a fundamental concept in linear algebra, and it is particularly important in the field of machine learning for tasks such as dimensionality reduction, data compression, and noise reduction.
 
-One possible use case of SVD is as a method for compressing images, which is explained in this notebook (available on my [GitHub repo](https://github.com/dmicz/devblognotebooks) in .ipynb format).
+In this blog, I'll explain one possible use case of SVD: image compression. This blog aims to demystify the complexities of SVD and demonstrate how it elegantly simplifies and compresses images without significant loss of quality. Whether you're a seasoned data scientist or a curious student, SVD can have incredible potential when applied to many projects.
+
+A copy of this blog post is located at my [GitHub repo](https://github.com/dmicz/devblognotebooks) in .ipynb format.
+
+![png](svd_compression_files/svd_compression_19_0.png)
+
+## Table of Contents
+* [Singular Value Decomposition](#singular-value-decomposition)
+* [Approximations Using SVD](#approximations-using-svd)
+* [Image Compression](#image-compression)
+* [JPEG?](#jpeg)
+
 
 ## Singular Value Decomposition
 
