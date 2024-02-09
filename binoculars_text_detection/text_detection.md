@@ -86,99 +86,6 @@ With this mechanism, $\mathcal{M}_1$ acts as the *observer* model, while $\mathc
 %pip install sentencepiece transformers torch numpy gradio gradio_client
 ```
 
-    Requirement already satisfied: sentencepiece in /scratch/dkm6080/.local/lib/python3.9/site-packages (0.1.99)
-    Requirement already satisfied: transformers in /scratch/dkm6080/.local/lib/python3.9/site-packages (4.37.1)
-    Requirement already satisfied: torch in /scratch/dkm6080/.local/lib/python3.9/site-packages (2.1.2)
-    Requirement already satisfied: numpy in /scratch/dkm6080/.local/lib/python3.9/site-packages (1.26.3)
-    Requirement already satisfied: gradio in /scratch/dkm6080/.local/lib/python3.9/site-packages (4.16.0)
-    Requirement already satisfied: gradio_client in /scratch/dkm6080/.local/lib/python3.9/site-packages (0.8.1)
-    Requirement already satisfied: tokenizers<0.19,>=0.14 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (0.15.1)
-    Requirement already satisfied: packaging>=20.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (23.2)
-    Requirement already satisfied: huggingface-hub<1.0,>=0.19.3 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (0.20.3)
-    Requirement already satisfied: filelock in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (3.13.1)
-    Requirement already satisfied: pyyaml>=5.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (6.0.1)
-    Requirement already satisfied: requests in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (2.31.0)
-    Requirement already satisfied: tqdm>=4.27 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (4.66.1)
-    Requirement already satisfied: regex!=2019.12.17 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (2023.12.25)
-    Requirement already satisfied: safetensors>=0.3.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from transformers) (0.4.2)
-    Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.105)
-    Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.105)
-    Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.105)
-    Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (8.9.2.26)
-    Requirement already satisfied: typing-extensions in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (4.9.0)
-    Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (11.0.2.54)
-    Requirement already satisfied: nvidia-nccl-cu12==2.18.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (2.18.1)
-    Requirement already satisfied: jinja2 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (3.1.3)
-    Requirement already satisfied: fsspec in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (2023.12.2)
-    Requirement already satisfied: triton==2.1.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (2.1.0)
-    Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.0.106)
-    Requirement already satisfied: sympy in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (1.12)
-    Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (10.3.2.106)
-    Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.105)
-    Requirement already satisfied: networkx in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (3.2.1)
-    Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (12.1.3.1)
-    Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from torch) (11.4.5.107)
-    Requirement already satisfied: nvidia-nvjitlink-cu12 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.3.101)
-    Requirement already satisfied: pandas<3.0,>=1.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (2.2.0)
-    Requirement already satisfied: semantic-version~=2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (2.10.0)
-    Requirement already satisfied: orjson~=3.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (3.9.12)
-    Requirement already satisfied: altair<6.0,>=4.2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (5.2.0)
-    Requirement already satisfied: python-multipart in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.0.6)
-    Requirement already satisfied: fastapi in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.109.0)
-    Requirement already satisfied: aiofiles<24.0,>=22.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (23.2.1)
-    Requirement already satisfied: ffmpy in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.3.1)
-    Requirement already satisfied: uvicorn>=0.14.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.27.0)
-    Requirement already satisfied: pydub in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.25.1)
-    Requirement already satisfied: markupsafe~=2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (2.1.4)
-    Requirement already satisfied: httpx in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.26.0)
-    Requirement already satisfied: typer[all]<1.0,>=0.9 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.9.0)
-    Requirement already satisfied: matplotlib~=3.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (3.8.2)
-    Requirement already satisfied: ruff>=0.1.7 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.1.14)
-    Requirement already satisfied: pillow<11.0,>=8.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (10.2.0)
-    Requirement already satisfied: importlib-resources<7.0,>=1.3 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (6.1.1)
-    Requirement already satisfied: pydantic>=2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (2.5.3)
-    Requirement already satisfied: tomlkit==0.12.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio) (0.12.0)
-    Requirement already satisfied: websockets<12.0,>=10.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from gradio_client) (11.0.3)
-    Requirement already satisfied: jsonschema>=3.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from altair<6.0,>=4.2.0->gradio) (4.21.1)
-    Requirement already satisfied: toolz in /scratch/dkm6080/.local/lib/python3.9/site-packages (from altair<6.0,>=4.2.0->gradio) (0.12.1)
-    Requirement already satisfied: zipp>=3.1.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from importlib-resources<7.0,>=1.3->gradio) (3.17.0)
-    Requirement already satisfied: fonttools>=4.22.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (4.47.2)
-    Requirement already satisfied: contourpy>=1.0.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (1.2.0)
-    Requirement already satisfied: pyparsing>=2.3.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (3.1.1)
-    Requirement already satisfied: cycler>=0.10 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (0.12.1)
-    Requirement already satisfied: python-dateutil>=2.7 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (2.8.2)
-    Requirement already satisfied: kiwisolver>=1.3.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from matplotlib~=3.0->gradio) (1.4.5)
-    Requirement already satisfied: tzdata>=2022.7 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from pandas<3.0,>=1.0->gradio) (2023.4)
-    Requirement already satisfied: pytz>=2020.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from pandas<3.0,>=1.0->gradio) (2023.3.post1)
-    Requirement already satisfied: pydantic-core==2.14.6 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from pydantic>=2.0->gradio) (2.14.6)
-    Requirement already satisfied: annotated-types>=0.4.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from pydantic>=2.0->gradio) (0.6.0)
-    Requirement already satisfied: click<9.0.0,>=7.1.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from typer[all]<1.0,>=0.9->gradio) (8.1.7)
-    Requirement already satisfied: rich<14.0.0,>=10.11.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from typer[all]<1.0,>=0.9->gradio) (13.7.0)
-    Requirement already satisfied: colorama<0.5.0,>=0.4.3 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from typer[all]<1.0,>=0.9->gradio) (0.4.6)
-    Requirement already satisfied: shellingham<2.0.0,>=1.3.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from typer[all]<1.0,>=0.9->gradio) (1.5.4)
-    Requirement already satisfied: h11>=0.8 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from uvicorn>=0.14.0->gradio) (0.14.0)
-    Requirement already satisfied: starlette<0.36.0,>=0.35.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from fastapi->gradio) (0.35.1)
-    Requirement already satisfied: sniffio in /scratch/dkm6080/.local/lib/python3.9/site-packages (from httpx->gradio) (1.3.0)
-    Requirement already satisfied: idna in /scratch/dkm6080/.local/lib/python3.9/site-packages (from httpx->gradio) (3.6)
-    Requirement already satisfied: anyio in /scratch/dkm6080/.local/lib/python3.9/site-packages (from httpx->gradio) (4.2.0)
-    Requirement already satisfied: httpcore==1.* in /scratch/dkm6080/.local/lib/python3.9/site-packages (from httpx->gradio) (1.0.2)
-    Requirement already satisfied: certifi in /scratch/dkm6080/.local/lib/python3.9/site-packages (from httpx->gradio) (2023.11.17)
-    Requirement already satisfied: charset-normalizer<4,>=2 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from requests->transformers) (3.3.2)
-    Requirement already satisfied: urllib3<3,>=1.21.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from requests->transformers) (1.26.6)
-    Requirement already satisfied: mpmath>=0.19 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from sympy->torch) (1.3.0)
-    Requirement already satisfied: attrs>=22.2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (23.2.0)
-    Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (2023.12.1)
-    Requirement already satisfied: rpds-py>=0.7.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (0.17.1)
-    Requirement already satisfied: referencing>=0.28.4 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (0.33.0)
-    Requirement already satisfied: six>=1.5 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib~=3.0->gradio) (1.16.0)
-    Requirement already satisfied: markdown-it-py>=2.2.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (3.0.0)
-    Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (2.17.2)
-    Requirement already satisfied: exceptiongroup>=1.0.2 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from anyio->httpx->gradio) (1.2.0)
-    Requirement already satisfied: mdurl~=0.1 in /scratch/dkm6080/.local/lib/python3.9/site-packages (from markdown-it-py>=2.2.0->rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (0.1.2)
-    [33mWARNING: You are using pip version 22.0.4; however, version 24.0 is available.
-    You should consider upgrading via the '/scratch/dkm6080/.local/bin/python3 -m pip install --upgrade pip' command.[0m[33m
-    [0mNote: you may need to restart the kernel to use updated packages.
-    
 
 
 ```python
@@ -189,8 +96,6 @@ import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 ```
 
-    /scratch/dkm6080/.local/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-      warnings.warn(
     
 
 
@@ -243,36 +148,6 @@ tokenizer = AutoTokenizer.from_pretrained(observer_name)
 
 ```
 
-    A new version of the following files was downloaded from https://huggingface.co/tiiuae/falcon-7b-instruct:
-    - configuration_falcon.py
-    . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-    
-    WARNING: You are currently loading Falcon using legacy code contained in the model repository. Falcon has now been fully ported into the Hugging Face transformers library. For the most up-to-date and high-performance version of the Falcon model code, please update to the latest version of transformers and then load the model without the trust_remote_code=True argument.
-    
-    A new version of the following files was downloaded from https://huggingface.co/tiiuae/falcon-7b-instruct:
-    - modeling_falcon.py
-    . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-    
-
-
-    Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
-
-
-    /scratch/dkm6080/.local/lib/python3.9/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
-      return self.fget.__get__(instance, owner)()
-    A new version of the following files was downloaded from https://huggingface.co/tiiuae/falcon-7b:
-    - configuration_falcon.py
-    . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-    
-    WARNING: You are currently loading Falcon using legacy code contained in the model repository. Falcon has now been fully ported into the Hugging Face transformers library. For the most up-to-date and high-performance version of the Falcon model code, please update to the latest version of transformers and then load the model without the trust_remote_code=True argument.
-    
-    A new version of the following files was downloaded from https://huggingface.co/tiiuae/falcon-7b:
-    - modeling_falcon.py
-    . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
-    
-
-
-    Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
 
 
 We then instantiate the tokenizer for both models, which turns the input text into several tokens.
@@ -595,11 +470,12 @@ The thresholds suggested by the paper's authors for this model combination (betw
 
 # Part 3: Further Investigation
 
-Let's take a look at the capybara prompt once more, visually. We'll take a look at each individual token's perplexity and cross perplexity, to investigate the mechanism of this method.
+Let's take a look at the capybara prompt once more, visually. We'll inspect each individual token's perplexity and cross perplexity, to investigate the mechanism of this method.
 
 
 ```python
 import matplotlib.pyplot as plt
+plt.rcParams["figure.dpi"] = 300
 
 capybara = '''Dr. Capy Cosmos, a capybara unlike any other, astounded the scientific community with his 
 groundbreaking research in astrophysics. With his keen sense of observation and unparalleled ability to interpret 
@@ -784,7 +660,6 @@ plt.ylabel("Perplexity")
 plt.xlim(0, 12)
 plt.ylim(0, 12)
 plt.show()
-
 ```
 
 
